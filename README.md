@@ -1,59 +1,24 @@
-# Netflix
+# Netflix Replica
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+Ho replicato la veste grafica di Netflix utilizzando Angular. Il progetto consente di eseguire le seguenti operazioni:
 
-## Development server
+## Funzionalità
 
-To start a local development server, run:
+- **Ricerca di film e serie TV**: È possibile cercare facilmente film e serie TV utilizzando un campo di ricerca.
+- **Leggere la trama**: Una volta trovato un film o una serie TV, è possibile visualizzare la trama.
+- **Aggiungere e rimuovere dai preferiti**: È possibile aggiungere un film o una serie TV alla lista dei preferiti e rimuoverlo in qualsiasi momento.
+  
+## Rotte
 
-```bash
-ng serve
-```
+Le rotte sono state configurate correttamente, permettendo una navigazione fluida tra le diverse sezioni del sito.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Gestione Login e Registrazione
 
-## Code scaffolding
+Sono stati implementati i sistemi di **login** e **registrazione** per gli utenti, garantendo l'accesso alle funzionalità personalizzate (come i preferiti).
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Tecnologie Utilizzate
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Tailwind
+- Angular
+- TMDb API per ottenere informazioni su film e serie TV
+- Gestione dello stato dei preferiti nel frontend
