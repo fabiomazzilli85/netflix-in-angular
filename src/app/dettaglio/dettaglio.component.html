@@ -1,0 +1,27 @@
+<div class="container mx-auto px-4 py-8">
+    <div ngIf="movieDetails; else loading" class="bg-white rounded-lg shadow-md p-6">
+        <p class="text-2xl text-center text-red-700 mb-4">
+            Titolo: {{ movieDetails.title }}
+        </p>
+
+        <img class="w-full h-96 object-cover rounded-md mb-4"
+            [src]="'https://image.tmdb.org/t/p/w500/' + movieDetails.poster_path" alt="{{ movieDetails.title }}" />
+
+        <p class="text-gray-700 leading-relaxed mb-6"><strong>Trama</strong>:
+            {{ movieDetails.overview }}
+        </p>
+
+        <ul class="text-gray-600">
+            <li class="mb-2">
+                <strong class="text-gray-800">Data di uscita:</strong>
+                {{ movieDetails.release_date }}
+            </li>
+            <li>
+                <strong class="text-gray-800">Valutazione:</strong>
+                {{ movieDetails.vote_average }}
+            </li>
+            <li>
+                <strong><a href="/"><i class="fa-solid fa-arrow-left mr-2"></i>Indietro</a></strong>
+            </li>
+        </ul>        
+    </div>

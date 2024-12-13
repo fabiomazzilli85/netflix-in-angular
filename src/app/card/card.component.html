@@ -1,0 +1,31 @@
+<div class="card bg-gray-100 shadow-lg rounded-lg overflow-hidden relative">
+  <!-- Immagine -->
+  <img
+    class="w-full h-64 object-cover"
+    [src]="movie.poster_path ? 'https://image.tmdb.org/t/p/w500/' + movie.poster_path : 'https://placehold.co/600x400?text=Hello+World'"
+    alt="{{ movie.title.toUpperCase() }}"
+  />
+
+  <button
+    class="pallini"
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    aria-label="Example icon-button with a menu"
+  >
+    <mat-icon>more_vert</mat-icon>
+  </button>
+
+  <h2 class="text-center my-3"><strong>{{ movie.title }}</strong></h2>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="addToList()">
+      <span><i class="fa-solid fa-plus mr-2"></i>Aggiungi</span>
+    </button>
+    <button mat-menu-item (click)="openDialog()">
+      <span><i class="fa-solid fa-film mr-2"></i>Trama</span>
+    </button>
+    <button mat-menu-item [routerLink]="['/dettaglio', movie.id]">
+      <span><i class="fa-solid fa-magnifying-glass mr-2"></i>Approfondisci</span>
+    </button>
+  </mat-menu>
+</div>

@@ -1,0 +1,22 @@
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-semibold text-center text-gray-200 mb-8">
+    Hai cercato un film di <span class="text-amber-400">Martin Scorsese</span>. Molto interessante...
+  </h1>
+
+  <mat-card class="example-card mt-11 p-6 bg-white rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
+    <mat-card-header class="mb-4">
+      <mat-card-title matBadge="&hearts;" matBadgeOverlap="false" class="demo-section text-2xl font-bold text-gray-800">
+        {{ movie.title }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="text-gray-700">
+      <p class="text-sm mb-2"><strong>Data di uscita:</strong> {{ movie.release_date }}</p>
+      <p class="text-base leading-relaxed">{{ movie.overview }}</p>
+    </mat-card-content>
+    <mat-card-footer class="example-card-footer flex justify-center mt-6">
+      <mat-chip-set aria-label="Chihuahua traits">
+        <button class="bg-amber-400 text-gray-800 p-3 rounded-lg shadow-md hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-50 transition duration-200" (click)="goBack()">Torna indietro</button>
+      </mat-chip-set>
+    </mat-card-footer>
+  </mat-card>
+</div>
